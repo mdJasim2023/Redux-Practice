@@ -1,5 +1,7 @@
 import React from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import CountryDetails from "./countrydetails";
 function Countries(){
     let [countries,setCountries]=React.useState([]);
 
@@ -13,7 +15,7 @@ function Countries(){
             {
               countries.map((a)=>{
                 return (
-                  <li><Link state={a}>{a.name.common}</Link></li>
+                  <li><Link to={`countrydetails/${a.name.common}`}>{a.name.common}</Link></li>
                 )
               })
             }

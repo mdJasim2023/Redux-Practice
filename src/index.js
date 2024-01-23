@@ -15,13 +15,13 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+  },
+  {
+    path:'/country',
+    element:<Countries></Countries>,
     children:[
       {
-        path:'/country',
-        element:<Countries></Countries>
-      },
-      {
-        path:'/countrydetails',
+        path:'countrydetails/:cname',
         element:<CountryDetails></CountryDetails>
       }
     ]
