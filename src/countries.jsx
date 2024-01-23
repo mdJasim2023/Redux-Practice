@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import CountryDetails from "./countrydetails";
 function Countries(){
     let [countries,setCountries]=React.useState([]);
@@ -22,6 +22,7 @@ function Countries(){
           </ul>
           <div className="w-50">
             <h1>Country Details :</h1>
+            <Outlet></Outlet>
           </div>
         </div>
   )
