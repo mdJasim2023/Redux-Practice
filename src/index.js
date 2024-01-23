@@ -7,12 +7,36 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Todolist from './todolist';
+import Countries from './countries';
+import CountryDetails from './countrydetails';
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App/>,
+    children:[
+      {
+        path:'/todolist',
+        element:<Todolist/>
+      },
+      {
+        path:'/countries',
+        element:<Countries/>,
+        children:[
+          {
+            path:'/countries/:cname',
+            element:<CountryDetails/>
+          }
+        ]
+      }
+    ]
+    
+  },
 
+]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <RouterProvider router={router} />
 );
 
 // If you want to start measuring performance in your app, pass a function

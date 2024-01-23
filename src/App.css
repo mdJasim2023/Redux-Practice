@@ -1,16 +1,4 @@
-table{
-  text-align: center;
-  width: 70%;
-  margin: 0px auto;
-  border-collapse: collapse;
-}
-img{
-  width: 120px;
-}
-thead{
-  background-color: lightblue;
-}
-th{
-  padding: 10px;
-  color: darkblue;
+.mybox{
+  border: 1px solid;
+   margin: 10px;
 }
