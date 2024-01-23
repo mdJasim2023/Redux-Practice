@@ -7,13 +7,16 @@ function CountryDetails(){
     let [countrydetails,setCountrydetails]=React.useState(null)
 
     React.useEffect(()=>{
-        axios.get(`https://restcountries.com/v3.1/alpha/${params.cname}`).then((res)=>{setCountrydetails(res.data)})
+        axios.get(`https://restcountries.com/v3.1/alpha/${params.cname}`).then((res)=>{
+            setCountrydetails(res.data[0])
+        },[params])
     })
     
     return(
+        {countrydetails &&
         <>
             <h1>hello</h1>
-        </>
+        </>}
     )
 }
 
