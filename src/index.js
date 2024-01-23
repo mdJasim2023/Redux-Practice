@@ -7,31 +7,19 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Todolist from './todolist';
-import Countries from './countries';
-import CountryDetails from './countrydetails';
+import Countries from './Countries';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
     children:[
       {
-        path:'/todolist',
-        element:<Todolist/>
-      },
-      {
         path:'/countries',
-        element:<Countries/>,
-        children:[
-          {
-            path:'/countries/:cname',
-            element:<CountryDetails/>
-          }
-        ]
+        element:<Countries></Countries>
       }
     ]
-    
   },
+  
 
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
