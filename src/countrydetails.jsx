@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router";
 import axios from "axios";
+import './App.css'
 
 function CountryDetails(){
     let params = useParams()
@@ -13,10 +14,17 @@ function CountryDetails(){
     })
     
     return(
-        {countrydetails &&
         <>
-            <h1>hello</h1>
-        </>}
+             {countrydetails &&
+            <div class="myclass">
+                <h1>Name :{countrydetails.name.common}</h1>
+                <h1>Region :{countrydetails.region}</h1>
+                <h1>Population :{countrydetails.population}</h1>
+                <h1>Capital :{countrydetails.capital}</h1>
+                <img src={countrydetails.flags.png}/>
+            </div>
+            }
+        </>
     )
 }
 
