@@ -16,14 +16,14 @@ const router = createBrowserRouter([
   },
       {
         path:'/countries',
-        element:<Countries></Countries>
-      },
-      {
-        path:'/countries/countrydetails/:cname',
-        element:<CountryDetails></CountryDetails>
-      }
-  
-  
+        element:<Countries></Countries>,
+        children:[
+          {
+            path:'countrydetails/:cname',
+            element:<CountryDetails></CountryDetails>
+          }
+        ]
+      },  
 
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));

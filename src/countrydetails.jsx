@@ -7,11 +7,11 @@ function CountryDetails() {
   var [countrydet, setCountrydet] = React.useState(null);
   useEffect(() => {
     axios
-      .get(`https://restcountries.com/v3.1/name/${params.cname}`)
+      .get(`https://restcountries.com/v3.1/alpha/${params.cname}`)
       .then((res) => {
         setCountrydet({ ...res.data[0] });
       });
-  }, []);
+  }, [params]);
   return (
     <>
       {countrydet && 
