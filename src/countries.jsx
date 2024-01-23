@@ -15,7 +15,7 @@ function Countries(){
             {
               countries.map((a)=>{
                 return (
-                  <li><Link to={`countrydetails/${a.name.common}`}>{a.name.common}</Link></li>
+                  <li><Link to={`countrydetails/${a.cca2}`}>{a.name.common}</Link></li>
                 )
               })
             }
