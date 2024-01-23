@@ -7,18 +7,22 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Countries from './Countries';
+import Countries from './countries';
+import CountryDetails from './countrydetails';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
-    children:[
+  },
       {
         path:'/countries',
         element:<Countries></Countries>
+      },
+      {
+        path:'/countries/countrydetails/:cname',
+        element:<CountryDetails></CountryDetails>
       }
-    ]
-  },
+  
   
 
 ]);

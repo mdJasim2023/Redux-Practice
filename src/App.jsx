@@ -8,7 +8,7 @@ function App() {
         <h1>Jasim Mohammad</h1>
         <Link>Home</Link>                                                                                   
         <Link to='/countries'>Countries</Link>
-        <Outlet/>                                                                                 
+                                                                                       
     </div>
   );
 }
