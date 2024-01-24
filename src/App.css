@@ -1,13 +1,14 @@
 .mybox{
-  width: 30%;
-  border: 1px solid;
+  width: 28%;
   border-radius: 20px;
-  margin: 80px auto;
-
+  margin: 7% auto;
+  background-image: url('https://img.freepik.com/free-vector/snowy-christmas-landscape_1048-9040.jpg?w=900&t=st=1706100647~exp=1706101247~hmac=8602a13be469bd282a10756c05094dcfce14156f3026b6384511c4f48a4193cf');
+  background-size: cover;
 }
 form{
   width: 70%;
   margin:0px auto;
+  
 
 }
 button{

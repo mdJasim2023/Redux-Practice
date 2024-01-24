@@ -2,8 +2,13 @@ import React from "react";
 import './App.css'
 import { useFormik } from "formik";
 import * as Yup from 'yup'
+import { Navigate, useNavigate } from "react-router-dom";
+import Saved from "./save";
 function Login(){
     let [student,setStudent]=React.useState([])
+
+    const navigate = useNavigate()
+
     let studentform = useFormik({
         initialValues:{
             username:'',
@@ -15,16 +20,15 @@ function Login(){
         }),
         onSubmit:(values)=>{
             setStudent([...student,values])
-            console.log(values);
+            let person = JSON.stringify(values)
+            navigate(`/save/ ${person}`)
         }
     })
-    // .min(2, 'Too Short!')
-    // .max(50, 'Too Long!')
+
     return(
         <div className="main">
         <div className="mybox">
-            {console.log(studentform)}
-            <h1 className='p-5 text-info text-center'>Login</h1>
+            <h1 className='p-5 text-center' style={{color:'darkblue',letterSpacing:'10px',fontFamily:'sans-serif',fontWeight:'700'}}>LOGIN</h1>
             <form onSubmit={studentform.handleSubmit} >
             <div>
                     <b>{studentform.touched.username && studentform.errors.username}</b>
@@ -40,7 +44,7 @@ function Login(){
                      <input type="password" name='password'className="form-control" id='floatingln' placeholder="lastname" onChange={studentform.handleChange} onBlur={studentform.handleBlur}/><br /><br />
                      <label>Password</label>
                 </div>
-                <button type="submit" className="btn btn-success w-100">Login</button>
+                <button type="submit" className="btn btn-info text-light w-100">Login</button>
             </form>
         </div>
         <div>
