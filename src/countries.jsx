@@ -6,9 +6,10 @@ function Countries(){
     let [countries,setCountries]=React.useState([]);
     let [order,setOrder]=React.useState(true)
     let [search,setSearch]=React.useState('')
+    let [temp,setTemp]=React.useState([])
 
     React.useEffect(()=>{
-        axios.get('https://restcountries.com/v3.1/all').then((res)=>{setCountries(res.data)})
+        axios.get('https://restcountries.com/v3.1/all').then((res)=>{setCountries(res.data);setTemp(res.data)})
     },[])
     const sortbycountries = ()=>{
         order = !order
@@ -25,10 +26,14 @@ function Countries(){
     }
 
     const fil = (e)=>{
-        var temp = countries.filter((a)=>{
-          a.name.common.includes(e)
-        })
+      setCountries([...temp])
+        setCountries(countries.filter((b)=>{
+          return(
+            (b.name.common.toLowerCase()).includes(e.toLowerCase())
+          )
+        }))
     }
+    console.log(temp);
       return(
         <div className="d-flex flexwrap">
           <ul className="w-50">
