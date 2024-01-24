@@ -10,7 +10,9 @@ function Login(){
             age:'',
             gender:''
         },
-        validationSchema:Yup.object()
+        validationSchema:Yup.object({
+            firstname:
+        })
         
     })
     return(
