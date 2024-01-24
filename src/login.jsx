@@ -4,7 +4,13 @@ import * as Yup from 'yup'
 
 function Login(){
     const studentform = useFormik({
-        firstname:'',
+        initialValues:{
+            firstname:'',
+            lastname:'',
+            age:'',
+            gender:''
+        },
+        validationSchema:Yup.object()
         
     })
     return(
