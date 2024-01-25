@@ -13,5 +13,4 @@ function Counter3(props){
         </div>
     )
 }
-
 export default connect((store)=>{return store}) (Counter3)
