@@ -1,10 +1,10 @@
 const initialvalue = {
-    count:0
+    count:10
 }
 
 let CounterReducer = (state=initialvalue,action)=>{
     if(action.type==='Inc'){
-        return {...state,count:state.count+1}
+        return {...state,count:state.count+10}
     }
     if(action.type==='Dec'){
         return {...state,count:state.count-1}
