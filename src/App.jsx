@@ -8,7 +8,7 @@ function App() {
   return (
     <Provider store={store}>
       <div className="border border-info p-4 m-2">
-          <h1>Jasim Mohammad</h1>
+          <h1>JASIM MOHAMMAD</h1>
           <Counter1></Counter1>
           <Counter2></Counter2>
           <Counter3></Counter3>
