@@ -8,7 +8,7 @@ const Todolist = (props)=>{
         props.dispatch({type:'Edit',payload:ind})
         inp.current.value=a.task
     }
-    console.log(props);
+    
     return(
         <div className="border  border-warning w-50" id="cen">
             <div className="border m-5 w- p-3 border-success">
@@ -17,14 +17,7 @@ const Todolist = (props)=>{
                 {!props.Todolist.isUpdate && <button className="btn btn-success" onClick={()=>{props.dispatch({type:'ADDTODO'})}}>AddTask</button>}
                 {props.Todolist.isUpdate && <button className="btn btn-secondary" onClick={()=>{props.dispatch({type:'Updatebtn'})}}>Update</button>}
             </div>
-            <div className="m-5">
-                <input type="radio" name='tasks' />&nbsp;&nbsp;
-                <label><b>ALL</b></label>&nbsp;&nbsp;
-                <input type="radio" name='tasks'/>&nbsp;&nbsp;
-                <label><b>COMPLETE</b></label>&nbsp;&nbsp;
-                <input type="radio" name='tasks'/>&nbsp;&nbsp;
-                <label><b>INCOMPLETE</b></label>&nbsp;&nbsp;
-            </div>
+            
             <ul className="border border-info p-2 m-5">
             <h1 className="text-secondary p-2">Todos</h1>
            
