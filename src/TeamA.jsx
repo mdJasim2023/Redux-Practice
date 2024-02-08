@@ -31,40 +31,48 @@ function TeamA(props){
     const handleP2 = ()=>{
         props.dispatch({type:'p2'})
         setP2(p2+1)
+        console.log(props);
     }
     const handleP3 = ()=>{
         props.dispatch({type:'p3'})
         setP3(p3+1)
+        console.log(props);
     }
 
     const handleP4 = ()=>{
         props.dispatch({type:'p4'})
         setP4(p4+1)
+        console.log(props);
     }
 
     const handleP5 = ()=>{
         props.dispatch({type:'p5'})
         setP5(p5+1)
+        console.log(props);
     }
 
     const handleP6 = ()=>{
         props.dispatch({type:'p6'})
         setP6(p6+1)
+        console.log(props);
     }
 
     const handleP7 = ()=>{
         props.dispatch({type:'p7'})
         setP7(p7+1)
+        console.log(props);
     }
 
     const handleP8 = ()=>{
         props.dispatch({type:'p8'})
         setP8(p8+1)
+        console.log(props);
     }
 
     const handleP9 = ()=>{
         props.dispatch({type:'p9'})
         setP9(p9+1)
+        console.log(props);
     }
 
     
